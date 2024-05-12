@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'course_detail.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,6 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-
           children: [
             Container(
               height: 200,
@@ -243,13 +244,10 @@ class HomeScreen extends StatelessWidget {
               height: 2,
               color: Colors.black12,
             ),
-
             Row(
               children: [
                 Container(
-
-
-                  width:40,
+                  width: 40,
                   height: 3,
                   color: Colors.red,
                 ),
@@ -280,15 +278,45 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    Text(
-                      "   📜 24 Lesson   ⏰ 2HR 30Min\n ",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          "   📜 24 Lesson ",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (ctx) {
+                                  return CourseDetail();
+                                },
+                              ),
+                            );
+                          },
+
+                          icon: Icon(
+                            Icons.play_circle,
+                            color: Colors.red,
+                          ),
+                        ),
+                        Text(
+                          "  2HR 30 Min",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 3,),
+                    SizedBox(
+                      height: 3,
+                    ),
                     Text(
                       "  Learn Web Development",
                       style: TextStyle(
@@ -299,7 +327,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
               ],
             ),
             SizedBox(
@@ -326,16 +353,45 @@ class HomeScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Row(
+                      children: [
+                        Text(
+                          "   📜 24 Lesson ",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (ctx) {
+                                  return CourseDetail();
+                                },
+                              ),
+                            );
+                          },
 
-                    Text(
-                      "   📜 24 Lesson   ⏰ 2HR 30Min\n ",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
+                          icon: Icon(
+                            Icons.play_circle,
+                            color: Colors.red,
+                          ),
+                        ),
+                        Text(
+                          "  2HR 30 Min",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 3,),
+                    SizedBox(
+                      height: 3,
+                    ),
                     Text(
                       "  Learn Pro UI/UX Design",
                       style: TextStyle(
@@ -346,21 +402,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
               ],
             ),
-
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
