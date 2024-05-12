@@ -35,8 +35,10 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
                 child: Image.asset(
-                  "assets/images/xasan.jpg",
+                  "assets/images/students.png",
+                  // color: Colors.orange.shade200,
                   fit: BoxFit.cover,
+
                 ),
               ),
               const SizedBox(height: 70),
@@ -50,30 +52,38 @@ class StartScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 50),
-              InkWell(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (ctx) {
-                        return HomeScreen();
-                      },
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    shape: BoxShape.circle,
-                  ),
-                  alignment: Alignment.center,
-                  child: const Text(
-                    "START",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
+              Container(
+                width: 120,
+                height: 120,
+
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(60),border: Border.all(color: Colors.red)),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) {
+                          return HomeScreen();
+                        },
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "START",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ),
                 ),
